@@ -14,8 +14,7 @@ import authReducer from "./store/reducers/auth";
 
 const composeEnhancers =
   process.env.REACT_APP_NODE_ENVX === "development"
-    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-    : null || compose;
+    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
   burgerBuilder: burgerBuilderReducer,
